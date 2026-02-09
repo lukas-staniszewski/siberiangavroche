@@ -1,0 +1,845 @@
+/*
+ * Siberian Gavroche — Reconstructed Site
+ * Based on WordPress Twenty Sixteen theme by Takashi Irie
+ * Original site: siberiangavroche.com (archived Dec 24, 2021)
+ *
+ * Color Palette:
+ *   Background (outer): #1a1a1a
+ *   Background (content): #ffffff
+ *   Body text: #1a1a1a
+ *   Secondary text: #686868
+ *   Accent (links): #007acc
+ *   Borders: #d1d1d1
+ *
+ * Typography:
+ *   Body: Merriweather, Georgia, serif
+ *   Headings/Nav: Montserrat, "Helvetica Neue", sans-serif
+ *   Mono: Inconsolata, monospace
+ */
+
+
+/* ==========================================================================
+   1.0 - Reset & Base
+   ========================================================================== */
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    background: #1a1a1a;
+    color: #1a1a1a;
+    font-family: Merriweather, Georgia, serif;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, main, menu, nav, section {
+    display: block;
+}
+
+img {
+    border: 0;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+figure {
+    margin: 0;
+}
+
+a {
+    color: #007acc;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #686868;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    font-weight: 700;
+    margin: 0;
+    text-rendering: optimizeLegibility;
+}
+
+p {
+    margin: 0 0 1.75em;
+}
+
+b, strong {
+    font-weight: 700;
+}
+
+em, i {
+    font-style: italic;
+}
+
+ul, ol {
+    margin: 0 0 1.75em 1.25em;
+    padding: 0;
+}
+
+ul {
+    list-style: disc;
+}
+
+
+/* ==========================================================================
+   2.0 - Site Structure
+   ========================================================================== */
+
+.site {
+    background-color: #fff;
+}
+
+.site-inner {
+    margin: 0 auto;
+    max-width: 1320px;
+    position: relative;
+}
+
+.site-content {
+    word-wrap: break-word;
+}
+
+.site-main {
+    margin-bottom: 3.5em;
+}
+
+
+/* ==========================================================================
+   3.0 - Header
+   ========================================================================== */
+
+.site-header {
+    padding: 2.625em 7.6923%;
+}
+
+.site-header-main {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.site-branding {
+    margin: 0.875em auto 0.875em 0;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.site-title {
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 23px;
+    font-size: 1.4375rem;
+    font-weight: 700;
+    line-height: 1.2173913043;
+    margin: 0;
+}
+
+.site-branding .site-title a {
+    color: #1a1a1a;
+}
+
+.site-branding .site-title a:hover,
+.site-branding .site-title a:focus {
+    color: #007acc;
+}
+
+.site-description {
+    color: #686868;
+    display: none;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.0769230769;
+    margin: 0.538461538em 0 0;
+}
+
+
+/* ==========================================================================
+   4.0 - Navigation
+   ========================================================================== */
+
+.main-navigation {
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation li {
+    border-top: 1px solid #d1d1d1;
+    position: relative;
+}
+
+.main-navigation a {
+    color: #1a1a1a;
+    display: block;
+    line-height: 1.3125;
+    outline-offset: -1px;
+    padding: 0.84375em 0;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+    color: #007acc;
+}
+
+.main-navigation .current-menu-item > a {
+    font-weight: 700;
+}
+
+.main-navigation .primary-menu {
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.site-header-menu {
+    display: none;
+    flex: 0 1 100%;
+    margin: 0.875em 0;
+}
+
+.site-header-menu.toggled-on {
+    display: block;
+}
+
+.menu-toggle {
+    background-color: transparent;
+    border: 1px solid #d1d1d1;
+    border-radius: 2px;
+    color: #1a1a1a;
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.046875em;
+    margin: 1.076923077em 0;
+    padding: 0.769230769em 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background-color: transparent;
+    border-color: #007acc;
+    color: #007acc;
+}
+
+.menu-toggle.toggled-on,
+.menu-toggle.toggled-on:hover,
+.menu-toggle.toggled-on:focus {
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+    color: #fff;
+}
+
+.lang-item img {
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+
+/* ==========================================================================
+   5.0 - Content
+   ========================================================================== */
+
+.site-main > article {
+    margin-bottom: 3.5em;
+    position: relative;
+}
+
+.entry-header,
+.entry-content {
+    margin-right: 7.6923%;
+    margin-left: 7.6923%;
+}
+
+.entry-title {
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 28px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 1em;
+}
+
+.entry-content a {
+    box-shadow: 0 1px 0 0 currentColor;
+}
+
+.entry-content a:hover,
+.entry-content a:focus {
+    box-shadow: none;
+}
+
+.entry-content h5 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.3125;
+    margin-top: 0;
+    margin-bottom: 1.75em;
+}
+
+.has-small-font-size {
+    font-size: 13px;
+    font-size: 0.8125rem;
+}
+
+
+/* ==========================================================================
+   6.0 - Two Column Layout (Homepage)
+   ========================================================================== */
+
+.columns.two-columns {
+    display: block;
+}
+
+.columns .column {
+    margin-bottom: 1.75em;
+}
+
+.columns .column center {
+    margin-bottom: 0.875em;
+    display: block;
+}
+
+.columns .column-photo-small {
+    flex: 0 0 auto;
+    max-width: 250px;
+}
+
+
+/* ==========================================================================
+   7.0 - Photo Placeholder
+   ========================================================================== */
+
+.photo-placeholder {
+    background: #f7f7f7;
+    border: 1px solid #d1d1d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    margin-bottom: 1em;
+}
+
+.photo-placeholder-inner {
+    text-align: center;
+    padding: 2em;
+    color: #999;
+}
+
+.photo-placeholder-inner svg {
+    margin-bottom: 1em;
+    opacity: 0.5;
+}
+
+.photo-placeholder-inner p {
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    margin: 0.5em 0;
+    color: #999;
+}
+
+.photo-placeholder-inner .photo-note {
+    font-size: 11px;
+    font-style: italic;
+    color: #bbb;
+}
+
+
+/* ==========================================================================
+   8.0 - Archived Notice
+   ========================================================================== */
+
+.archived-notice {
+    background: #f7f7f7;
+    border-left: 4px solid #d1d1d1;
+    padding: 1em 1.5em;
+    margin-bottom: 1.75em;
+    font-size: 14px;
+    color: #686868;
+    font-style: italic;
+}
+
+.archived-notice p {
+    margin: 0;
+}
+
+
+/* ==========================================================================
+   9.0 - Video Embed
+   ========================================================================== */
+
+.video-embed {
+    margin: 1.75em 0;
+}
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ==========================================================================
+   10.0 - Section Dividers
+   ========================================================================== */
+
+.site-main > article + article {
+    border-top: 1px solid #d1d1d1;
+    padding-top: 3.5em;
+}
+
+
+/* ==========================================================================
+   11.0 - Footer
+   ========================================================================== */
+
+.site-footer {
+    border-top: 4px solid #1a1a1a;
+    padding: 0 7.6923% 1.75em;
+}
+
+.site-footer .main-navigation {
+    margin-bottom: 1.75em;
+}
+
+.site-footer .main-navigation li {
+    border-top: 1px solid #d1d1d1;
+}
+
+.site-footer .main-navigation a {
+    padding: 0.84375em 0;
+}
+
+.site-info {
+    color: #686868;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    line-height: 1.6153846154;
+}
+
+.site-info .site-title {
+    font-size: inherit;
+}
+
+.site-info .site-title a {
+    color: #686868;
+}
+
+.site-info .site-title a:hover {
+    color: #007acc;
+}
+
+.site-info .sep {
+    margin: 0 0.25em;
+}
+
+.site-info .archive-note {
+    font-style: italic;
+}
+
+.site-info .archive-note a {
+    color: #686868;
+    box-shadow: 0 1px 0 0 currentColor;
+}
+
+.site-info .archive-note a:hover {
+    color: #007acc;
+    box-shadow: none;
+}
+
+
+/* ==========================================================================
+   11.4 - Contact Form
+   ========================================================================== */
+
+.contact-form {
+    max-width: 600px;
+    margin-top: 1.75em;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    display: block;
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.076923077em;
+    line-height: 1.6153846154;
+    text-transform: uppercase;
+    color: #686868;
+    margin-bottom: 0.4375em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    background: #f7f7f7;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    border: 1px solid #d1d1d1;
+    border-radius: 2px;
+    color: #686868;
+    font-family: Merriweather, Georgia, serif;
+    font-size: 16px;
+    line-height: 1.75;
+    padding: 0.625em 0.75em;
+    width: 100%;
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    background-color: #fff;
+    border-color: #007acc;
+    color: #1a1a1a;
+    outline: 0;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit-btn {
+    background: #1a1a1a;
+    border: 0;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.046875em;
+    line-height: 1;
+    padding: 0.84375em 1.5em 0.78125em;
+    text-transform: uppercase;
+    transition: background-color 0.15s ease;
+}
+
+.form-submit-btn:hover,
+.form-submit-btn:focus {
+    background: #007acc;
+}
+
+.form-submit-btn:focus {
+    outline: thin dotted;
+    outline-offset: -4px;
+}
+
+
+/* ==========================================================================
+   11.5 - Book Section
+   ========================================================================== */
+
+.book-download-btn {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #fff !important;
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.046875em;
+    line-height: 1;
+    padding: 0.84375em 1.5em 0.78125em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    box-shadow: none !important;
+    transition: background-color 0.15s ease;
+}
+
+.book-download-btn:hover,
+.book-download-btn:focus {
+    background: #007acc;
+    color: #fff !important;
+}
+
+.book-dedication {
+    background: #f7f7f7;
+    border-left: 4px solid #1a1a1a;
+    padding: 1.25em 1.75em;
+    margin: 1.75em 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.book-dedication p {
+    margin-bottom: 0.5em;
+}
+
+.book-dedication p:last-child {
+    margin-bottom: 0;
+}
+
+.book-toc {
+    margin: 1.75em 0;
+}
+
+.toc-section {
+    margin-bottom: 1.5em;
+}
+
+.toc-section h4 {
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin: 0 0 0.5em;
+    color: #1a1a1a;
+}
+
+.toc-section h4 em {
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    color: #686868;
+}
+
+.toc-section ul {
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+.toc-section li {
+    font-size: 15px;
+    padding: 0.25em 0;
+    border-bottom: 1px solid #f0f0f0;
+    color: #1a1a1a;
+}
+
+.toc-section li em {
+    color: #686868;
+    font-size: 13px;
+}
+
+.book-embed {
+    margin-top: 2.5em;
+}
+
+.book-embed h3 {
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.046875em;
+    margin-bottom: 1em;
+}
+
+.pdf-viewer {
+    border: 1px solid #d1d1d1;
+    margin-bottom: 1.75em;
+}
+
+.pdf-viewer iframe {
+    display: block;
+    border: 0;
+    min-height: 700px;
+}
+
+
+/* ==========================================================================
+   12.0 - Media Queries
+   ========================================================================== */
+
+/* >= 710px */
+@media screen and (min-width: 44.375em) {
+    body {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .site-description {
+        display: block;
+    }
+
+    .entry-title {
+        font-size: 33px;
+        font-size: 2.0625rem;
+        line-height: 1.2727272727;
+        margin-bottom: 0.8484848485em;
+    }
+
+    .columns.two-columns {
+        display: flex;
+        gap: 2em;
+    }
+
+    .columns .column {
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    .photo-placeholder {
+        min-height: 500px;
+    }
+}
+
+/* >= 910px */
+@media screen and (min-width: 56.875em) {
+    .site-header {
+        padding: 2.625em 7.6923%;
+    }
+
+    .site-header-main {
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .site-header-menu {
+        display: block;
+        flex: 0 1 auto;
+        margin: 0;
+    }
+
+    .main-navigation li {
+        border: 0;
+        display: inline-block;
+    }
+
+    .main-navigation a {
+        display: block;
+        font-size: 13px;
+        font-size: 0.8125rem;
+        letter-spacing: 0.076923077em;
+        line-height: 1.6153846154;
+        outline-offset: -8px;
+        padding: 0.769230769em 0.538461538em;
+        text-transform: uppercase;
+    }
+
+    .main-navigation .primary-menu {
+        border: 0;
+    }
+
+    .main-navigation .primary-menu > li:first-child > a {
+        padding-left: 0;
+    }
+
+    /* Footer horizontal nav */
+    .site-footer .main-navigation li {
+        border: 0;
+        display: inline-block;
+    }
+
+    .site-footer .main-navigation a {
+        font-size: 13px;
+        font-size: 0.8125rem;
+        letter-spacing: 0.076923077em;
+        padding: 0.538461538em;
+        text-transform: uppercase;
+    }
+
+    .site-footer .main-navigation .primary-menu > li:first-child > a {
+        padding-left: 0;
+    }
+}
+
+/* >= 985px */
+@media screen and (min-width: 61.5625em) {
+    .entry-header,
+    .entry-content {
+        margin-right: 7.6923%;
+        margin-left: 7.6923%;
+    }
+}
+
+/* >= 1200px */
+@media screen and (min-width: 75em) {
+    body {
+        font-size: 16px;
+        font-size: 1rem;
+    }
+}
+
+
+/* ==========================================================================
+   13.0 - Smooth Scrolling
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1em;
+}
+
+
+/* ==========================================================================
+   14.0 - Print Styles
+   ========================================================================== */
+
+@media print {
+    body {
+        background: none !important;
+        color: #1a1a1a;
+        font-size: 13pt;
+    }
+
+    .site {
+        max-width: none;
+    }
+
+    .menu-toggle,
+    .site-header-menu,
+    .site-footer .main-navigation {
+        display: none;
+    }
+
+    .entry-title {
+        font-size: 24pt;
+    }
+
+    .site-footer {
+        border-top: 1px solid #1a1a1a;
+    }
+
+    a {
+        color: #1a1a1a;
+    }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Film dokumentalny &ndash; Syberyjski Gavroche</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:wght@400;700&family=Inconsolata:wght@400&display=fallback" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home no-sidebar">
+
+<div id="page" class="site">
+    <div class="site-inner">
+
+        <!-- Header -->
+        <header id="masthead" class="site-header">
+            <div class="site-header-main">
+                <div class="site-branding">
+                    <p class="site-title"><a href="pl.html" rel="home">Syberyjski Gavroche</a></p>
+                    <p class="site-description">Historia Jana Staniszewskiego</p>
+                </div>
+
+                <button id="menu-toggle" class="menu-toggle" aria-expanded="false">Menu</button>
+
+                <nav id="site-navigation" class="main-navigation site-header-menu" role="navigation" aria-label="Menu g&lstrok;&oacute;wne">
+                    <ul id="primary-menu" class="primary-menu">
+                        <li class="menu-item"><a href="pl.html">Wspomnienia</a></li>
+                        <li class="menu-item"><a href="pl-jan.html">Jan Staniszewski</a></li>
+                        <li class="menu-item"><a href="pl-ludzie.html">Ludzie</a></li>
+                        <li class="menu-item"><a href="pl-ksiazka.html">Ksi&aogon;&zdot;ka</a></li>
+                        <li class="menu-item current-menu-item"><a href="pl-film.html" aria-current="page">Film</a></li>
+                        <li class="menu-item"><a href="pl-kontakt.html">Kontakt</a></li>
+                        <li class="menu-item lang-item"><a href="documentary.html" hreflang="en" lang="en" title="English"><svg width="16" height="11" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#s)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#t)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div id="content" class="site-content">
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main" role="main">
+
+                    <article id="film" class="page">
+                        <header class="entry-header">
+                            <h1 class="entry-title">Film dokumentalny</h1>
+                        </header>
+
+                        <div class="entry-content">
+                            <p>Film dokumentalny <em>Syberyjski Gavroche &mdash; Wspomnienia Jana Staniszewskiego</em> przedstawia Jana dziel&aogon;cego si&eogon; wspomnieniami z deportacji i &zdot;ycia na Syberii.</p>
+
+                            <div class="video-embed">
+                                <div class="video-responsive">
+                                    <iframe src="https://player.vimeo.com/video/240749326?h=b080834bcf&title=0&byline=0&portrait=0"
+                                            width="840"
+                                            height="473"
+                                            frameborder="0"
+                                            allow="autoplay; fullscreen; picture-in-picture"
+                                            allowfullscreen
+                                            title="Syberyjski Gavroche - Wspomnienia Jana Staniszewskiego">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </main>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="colophon" class="site-footer" role="contentinfo">
+            <nav class="main-navigation" role="navigation" aria-label="Menu stopki">
+                <ul class="primary-menu">
+                    <li class="menu-item"><a href="pl.html">Wspomnienia</a></li>
+                    <li class="menu-item"><a href="pl-jan.html">Jan Staniszewski</a></li>
+                    <li class="menu-item"><a href="pl-ludzie.html">Ludzie</a></li>
+                    <li class="menu-item"><a href="pl-ksiazka.html">Ksi&aogon;&zdot;ka</a></li>
+                    <li class="menu-item"><a href="pl-film.html">Film</a></li>
+                    <li class="menu-item"><a href="pl-kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-info">
+                <span class="site-title"><a href="pl.html" rel="home">Syberyjski Gavroche</a></span>
+                <span class="sep"> &mdash; </span>
+                <span>&copy; 2026 Preserving the memories of Jan Staniszewski. Dedicated to all who survived deportation to Siberia.</span>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+<script>
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    var nav = document.getElementById('site-navigation');
+    var expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    this.classList.toggle('toggled-on');
+    nav.classList.toggle('toggled-on');
+});
+</script>
+
+</body>
+</html>
